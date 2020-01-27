@@ -1,0 +1,22 @@
+{
+    "name": "Find a word on Wikipedia",
+    "version": "1.0.93",
+    "description": "Get the meaning of a word from Wikipedia",
+    "permissions": ["tabs", "<all_urls>"],
+    "content_scripts": [{
+        "matches": [
+            "<all_urls>"
+        ],
+        "js": ["content.js"],
+        "css": ["myStyles.css"],
+        "all_frames": true
+    }],
+    "manifest_version": 2,
+    "web_accessible_resources": [
+        "background.js"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    }
+}
